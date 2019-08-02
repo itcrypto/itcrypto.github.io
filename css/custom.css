@@ -1,0 +1,32 @@
+.jumbotron {
+ height:200px;
+}
+
+.jumbotron h1 {
+ font-size:32pt;
+}
+
+.navbar-inverse {
+  background-color: #A31F34;
+  border-color: #A31F34;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+.navbar-fixed-left {
+  width: 200px;
+  position: fixed;
+  border-radius: 0;
+  height: 100%;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 200px;
+}
+
+.navbar-fixed-left + .container {
+  padding-left: 200px;
+}
