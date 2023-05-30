@@ -28,6 +28,25 @@
     });
   </script>
   <script type="text/javascript" src="../css/MathJax.js"></script>
+  <script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+  </script>
+
+  <style>
+    .abstract {
+      display:none;
+      padding-left:10px;
+      padding-top:10px;
+      padding-bottom:10px;
+      padding-right:10px;
+    }
+  </style>
 
 </head>
 
@@ -92,7 +111,14 @@
    <tr><td><nobr>1:00 - 2:00</nobr></td><td><b>Spotlight Talk II</b>
     (Chair: TBD)</td></tr>
    <tr><td></td><td><strong>Sidharth Jaggi (University of Bristol):
-     </strong><i>on communication in the presence of adversarial jamming</i></td></tr>
+     </strong><i>Communication in the presence of adversarial jamming: The curious case of the erasure channel</i>
+     <br>
+     [<a style="cursor:pointer;" onclick="toggle_visibility('jaggi_abstract');">Abstract</a>]
+     <div class="abstract" id="jaggi_abstract">
+      Alice wishes to communicate with Bob, but the malicious jammer James wishes to stop this communication from occurring. What can she do? In this talk I’ll explore recent discoveries/capacity-characterizations in a variety of settings (the role of causality in James’ jamming, the role of myopicity in his observations, the interplay between these two, and the effect of rate-limited feedback). I’ll focus on one of the simplest non-trivial jamming channels—the case of a binary input channel, in which James may erase a constant fraction of transmissions—even here, interesting phenomena occur. Time permitting, I may also briefly describe generalizations to other jamming channels/scenarios.
+      </div>
+      </td></tr>
+
     <tr><td><nobr>2:00 - 2:30</nobr></td><td><b>Break</b>
    <tr><td><nobr>2:30-4:00</nobr></td><td><b>Session II: Secure communication and MPC</b> (Chair: TBD)
  </td></tr>
@@ -135,25 +161,34 @@
  <tr><td><nobr>11:00 - 12:00</nobr></td><td><b>Spotlight Talk III</b>
     (Chair: TBD)</td></tr>
    <tr><td></td><td><strong>Mohammad Mahmoody (University of Virginia):
-     </strong><i>on adversarially robust machine learning, a cryptographic perspective</i></td></tr>
+     </strong><i>On Data Poisoning: Connections to Cryptography and Search for Tight Bounds</i>
+     <br>
+     [<a style="cursor:pointer;" onclick="toggle_visibility('mahmoody_abstract');">Abstract</a>]
+     <div class="abstract" id="mahmoody_abstract">
+      In this talk, I will present results from a series of works on the power and limitation of data poisoning attacks (mostly in the so-called targeted setting). I will first discuss how to use tools from cryptographic attacks on collective coin flipping to boost an attack's power. I will then discuss methods to provably bound the power of the attacker and achieve tight bounds.
+      <br><br>
+      Based on papers from SODA'20, TCC'21, UAI’21, and NeurIPS’22 (with Omid Etesami, Ji Gao, Saeed Mahloujifar, Amin Karbasi, Steve Hanneke, Idan Mehalel, and Shay Moran).
+      </div>
+   </td></tr>
    <tr><td><nobr>12:00 - 1:00</nobr></td><td><i>Lunch </i></td></tr>
    <tr><td><nobr>1:00 - 2:00</nobr></td><td><b>Spotlight Talk IV</b>
     (Chair: TBD)</td></tr>
    <tr><td></td><td><strong>Geoffroy Couteau (CNRS):
      </strong><i>on correlated pseudorandomness</i></td></tr>
     <tr><td><nobr>2:00 - 2:30</nobr></td><td><b>Break</b>
-   <tr><td><nobr>2:30-4:00</nobr></td><td><b>Session IV:  Learning, Quantum, and Differential Privacy</b> (Chair: TBD)
+   <tr><td><nobr>2:30-4:00</nobr></td><td><b>Session IV:  Quantum, Merger, and Differential Privacy</b> (Chair: TBD)
  </td></tr>
  <tr><td></td><td>
   <ol>
-    <li><b>Locally Covert Learning of Fourier-Sparse Functions</b> <br>
-    Justin Holmgren and Ruta Jawale</li>
-
-    <li><b>Quantum security of subset cover problems</b> <br>
-    Samuel Bouaziz-Ermann, Alex Bredariol Grilo and Damien Vergnaud</li>
 
   <li><b>Differentially Private Aggregation via Imperfect Shuffling</b> <br>
     Badih Ghazi, Ravi Kumar, Pasin Manurangsi, Jelani Nelson and Samson Zhou</li>
+
+  <li><b>Online Mergers and Applications to (Optimal) Accumulators and Registration-Based Encryption</b> <br>
+    Mohammad Mahmoody and Wei Qi</li>
+
+  <li><b>Quantum security of subset cover problems</b> <br>
+    Samuel Bouaziz-Ermann, Alex Bredariol Grilo and Damien Vergnaud</li>
 
   </ol>
 
@@ -189,20 +224,25 @@
    <tr><td><nobr>1:00 - 2:00</nobr></td><td><b>Spotlight Talk VI</b>
     (Chair: TBD)</td></tr>
    <tr><td></td><td><strong>Ron Rothblum (Technion):
-     </strong><i>on interactive oracle proofs (IOPs) and SNARGs</i></td></tr>
+     </strong><i>Proving as Fast as Computing</i>
+   <br>
+     [<a style="cursor:pointer;" onclick="toggle_visibility('rothblum_abstract');">Abstract</a>]
+     <div class="abstract" id="rothblum_abstract">
+      Succinct arguments allow a prover to convince a verifier that a given statement is true, using an extremely short proof. A major bottleneck that has been the focus of a large body of work is in reducing the overhead incurred by the prover in order to prove correctness of the computation. In the talk I will describe methods which allow one to prove correctness with nearly optimal asymptotic overhead.
+      </div></td></tr>
     <tr><td><nobr>2:00 - 2:30</nobr></td><td><b>Break</b>
-   <tr><td><nobr>2:30-4:00</nobr></td><td><b>Session VI:  NM Codes, Shuffler and Merger</b> (Chair: TBD)
+   <tr><td><nobr>2:30-4:00</nobr></td><td><b>Session VI:  NM Codes, Shuffler and Learning</b> (Chair: TBD)
  </td></tr>
  <tr><td></td><td>
   <ol>
     <li><b>Distributed Shuffling in Adversarial Environments</b> <br>
     Kasper Green Larsen, Maciej Obremski and Mark Simkin</li>
 
-    <li><b>Online Mergers and Applications to (Optimal) Accumulators and Registration-Based Encryption</b> <br>
-    Mohammad Mahmoody and Wei Qi</li>
-
   <li><b>Interactive Non-Malleable Codes Against Desynchronizing Attacks in the Multi-Party Setting</b> <br>
     Nils Fleischhacker, Suparno Ghoshal and Mark Simkin</li>
+
+  <li><b>Locally Covert Learning of Fourier-Sparse Functions</b> <br>
+    Justin Holmgren and Ruta Jawale</li>
 
   </ol>
 
