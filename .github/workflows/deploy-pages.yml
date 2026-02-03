@@ -1,0 +1,30 @@
+name: Deploy GitHub Pages
+
+# Trigger on push to main branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-22.04
+
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+    # 1️⃣ Checkout the repo
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # 2️⃣ Upload only changed files as artifact
+    - name: Upload site artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: .
+
+    # 3️⃣ Deploy to GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: actions/deploy-pages@v1
