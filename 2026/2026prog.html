@@ -14,10 +14,14 @@
 <link rel="canonical" href="https://itcrypto.github.io/">
 <link rel="alternate" type="application/rss+xml" title="Information-Theoretic Cryptography Conference" href="https://itcrypto.github.io/feed.xml">
 
+
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
     extensions: ["tex2jax.js"],
     jax: ["input/TeX", "output/HTML-CSS"],
+    TeX: {
+    extensions: ["AMSmath.js", "AMSsymbols.js"]
+    },
     tex2jax: {
     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
     displayMath: [ ['$$','$$'], ["\[","\]"], ["\\[","\\]"] ],
@@ -88,7 +92,7 @@ tr:nth-child(odd) {
     <li><a href="2026cfp.html">Call for Papers</a></li>
   <li><a href="2026submit.html">Paper Submission</a></li>
     <li><a href="2026Accepted.html">Accepted Papers</a></li>
-    <!-- <li><a href="2026prog.html">Program</a></li> -->
+     <li><a href="2026prog.html">Program</a></li>
   <li><a href="../past.html">Past ITCs</a></li>
   <li><a href="../steering.html">Steering Committee</a></li>
   </ul><p><br><p>
@@ -97,11 +101,395 @@ tr:nth-child(odd) {
 
   <div class="col-md-10">
 
+<style>
+.link-button:hover {
+    text-decoration: underline;
+}
+</style>
 
-<h3 style="margin:0 0 6px;color:#8B0000"><b>Information about the ITC 2026 program will be posted here after decisions.</b></h3> 
 
+<h3 style="margin:0 0 6px"><b>ITC 2026: Program (Preliminary)</b></h3>
+<br>
+
+<button
+    class="link-button"
+    onclick="toggleAbstracts()"
+    style="background:none;border:none;padding:0;color:#0000EE;font:inherit;cursor:pointer;">
+    Show/Hide Abstracts
+</button>
+<br><br>
+
+<script>
+function toggleAbstracts() {
+    const abstracts = document.getElementsByClassName("abstract");
+
+    for (const a of abstracts) {
+        if (window.getComputedStyle(a).display === "none") {
+            a.style.display = "block";
+        } else {
+            a.style.display = "none";
+        }
+    }
+}
+</script>
+
+
+
+<h4 style="margin:0 0 6px;color:#8B0000">Saturday August 15</h4>
+<table>
+<td> 9:00am - 9:05am </td>
+<td> Opening Remarks </td>
+<tr>
+<td> 9:05am - 10:45am</td>
+<td> <b> Session 1: Quantum Cryptography and Black-Box Impossibilities</b>
+<ul>
+<li>When Does Quantum Differential Privacy Compose? (Daniel Alabi, Theshani Nurandha)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+Composition is a cornerstone of classical differential privacy, enabling strong end-to-end guarantees for complex algorithms through composition theorems (e.g., basic and advanced).
+In the quantum setting, however, privacy is defined operationally against arbitrary measurements, and classical composition arguments based on scalar privacy-loss random variables no longer apply.
+As a result, it has remained unclear when meaningful composition guarantees can be obtained for quantum differential privacy (QDP).
+
+<br><br>In this work, we clarify both the limitations and possibilities of composition in the quantum setting.
+We first show that classical-style composition fails in full generality for POVM-based approximate QDP: even quantum channels that are individually perfectly private can completely lose privacy when combined through correlated joint implementations.
+
+<br><br>We then identify a setting in which clean composition guarantees can be restored.
+For tensor-product channels acting on product neighboring inputs, we introduce a *quantum moments accountant* based on an operator-valued notion of privacy loss and a matrix moment-generating function.
+Although the resulting R\'enyi-type divergence does not satisfy a data-processing inequality, we prove that controlling its moments suffices to bound measured R\'enyi divergence, yielding operational privacy guarantees against arbitrary measurements.
+This leads to advanced-composition-style bounds with the same leading-order behavior as in the classical theory.
+
+<br><br>Our results demonstrate that meaningful composition theorems for quantum differential privacy require carefully articulated structural assumptions on channels, inputs, and adversarial measurements, and provide a principled framework for understanding which classical ideas do and do not extend to the quantum setting.
+
+</i></p>
+
+<li><u>Highlights Talk:</u> Succinctness Requires Probabilistic Checking in the Quantum World (Ziyi Guan)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>Succinct arguments are cryptographic proofs with small communication complexity (and sometimes small verifier size). Quantum succinct arguments extend this notion by allowing the prover and verifier to be quantum algorithms that exchange quantum messages. In this talk I will discuss our result showing that quantum succinct arguments in the random oracle model (ROM) is as hard as constructing quantum interactive oracle proofs (QIOPs). The proof gives an efficient transformation from quantum succinct arguments to QIOPs, showing that quantum succinctness implies quantum probabilistic checking. Along the way, we introduce a new proximity test for compressed oracles and adapt locality properties of perfect hash functions to the quantum setting. This talk is based on joint work with Alessandro Chiesa, Ignacio Manzur, and Thomas Vidick.</i></p>
+
+<li><u>Highlights Talk:</u> Compressed Permutation Oracles (Joseph Carolan)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+The analysis of quantum algorithms which query random, invertible permutations has been a long-standing challenge in cryptography. Many techniques which apply to random oracles fail, or are not known to generalize to this setting. As a result, foundational cryptographic constructions involving permutations often lack quantum security proofs. With the aim of closing this gap, we develop and prove soundness of a compressed permutation oracle. Our construction shares many of the attractive features of Zhandry's original compressed function oracle: the purification is a small list of input-output pairs which meaningfully reflect an algorithm's knowledge of the oracle.
+
+<br><br>We then apply this framework to show that the Feistel construction with seven rounds is a strong quantum PRP, resolving an open question of (Zhandry, 2012). We further re-prove essentially all known quantum query lower bounds in the random permutation model, notably the collision and preimage resistance of both Sponge and Davies-Meyer, hardness of double-sided zero search and sparse predicate search, and give new lower bounds for cycle finding and the one-more problem.
+</i></p>
+
+<li><u>Highlights Talk:</u> Separating Quantum and Classical Advice with Good Codes (Andrew Huang)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>We show an unconditional classical oracle separation between the class of languages that can be verified using a quantum proof ($\mathsf{QMA}$) and the class of languages that can be verified with a classical proof ($\mathsf{QCMA}$). Compared to the recent work of Bostanci, Haferkamp, Nirkhe, and Zhandry, our proof is conceptually simpler, and readily extends to other oracle separations. In particular, our techniques yield the first unconditional classical oracle separation between the class of languages that can be decided with quantum advice ($\mathsf{BQP/qpoly}$) and the class of languages that can be decided with classical advice ($\mathsf{BQP/poly}$), improving on the quantum oracle separation of Aaronson and Kuperberg and the classically-accessible classical oracle separation of Li, Liu, Pelecanos and Yamakawa.
+
+Our oracles are based on the code intersection problem introduced by Yamakawa and Zhandry, combined with codes that have extremely good list-recovery properties.
+
+Based on joint work with John Bostanci and Vinod Vaikuntanathan.</i></p>
+
+
+</ul>
+</td>
+</tr>
+<tr><td> 10:45am - 11:15am </td> <td> Break (catered) </td></tr>
+<tr>
+<td> 11:15am - 12:30pm</td>
+<td> <b> Session 2: Zero-Knowledge</b>
+<ul>
+<li>Interactive Proofs for Batch Polynomial Evaluation (Gal Arnon, Alessandro Chiesa, Giacomo Fenzi, Eylon Yogev)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+Polynomials are a fundamental mathematical object underlying virtually all of theoretical computer science. In proof systems, a common task for the verifier is to evaluate a polynomial of degree $d$ at $m$ distinct points. The best known algorithm for this problem performs $O((m + d) \cdot \log^2(m + d))$ field operations.
+
+<br><br>We present a concretely efficient $\mathsf{MA}$ protocol for this problem in which the verifier runs in *linear time*: the prover sends a single message consisting of $d - 1$ field elements, and the verifier performs only $O(m + d)$ field operations. We further extend our protocol to handle the more general setting of evaluating multiple polynomials at multiple points, and for this problem, we construct an $\mathsf{AMA}$ protocol.
+
+<br><br>Our protocols improve the verifier time in several interactive proofs. Most notable are the sumcheck protocol over a large summation domain and protocols that rely on polynomial quotienting. In particular, by a straightforward application of our results, we reduce the verifier's runtime in the STIR protocol (CRYPTO 2024) to match that of WHIR (EUROCRYPT 2025), despite WHIR being highly optimized for verification time.
+
+<br><br>As an additional application, we show that any univariate polynomial commitment scheme (PCS) can be transformed, in a black-box manner, into a new scheme that efficiently supports batch openings at multiple points. In particular, opening $m$ points incurs only a constant overhead compared to opening a single point.
+</i></p>
+
+<li>Fiat-Shamir for Bounded-Depth Adversaries (Liyan Chen, Yilei Chen, Zikuan Huang, Nuozhou Sun, Tianqi Yang, Yiding Zhang)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+We study how to construct hash functions that can securely instantiate the Fiat-Shamir transformation against *bounded-depth* adversaries. The motivation is twofold. First, given the recent fruitful line of research of constructing cryptographic primitives against bounded-depth adversaries under *worst-case complexity assumptions*, and the rich applications of Fiat-Shamir, instantiating Fiat-Shamir hash functions against bounded-depth adversaries under worst-case complexity assumptions might lead to further applications (such as SNARG for P, showing the cryptographic hardness of PPAD, etc.) against bounded-depth adversaries. 
+Second, we wonder whether it is possible to overcome the impossibility results of constructing Fiat-Shamir for arguments (Goldwasser, Kalai, FOCS '03) in the setting where the depth of the adversary is bounded, given that the known impossibility results (against p.p.t. adversaries) are contrived.
+
+<br><br>Our main results give new insights for Fiat-Shamir against bounded-depth adversaries in both the positive and negative directions. On the positive side, for Fiat-Shamir for proofs with certain properties, we show that weak worst-case assumptions are enough for constructing explicit hash functions that give $\mathsf{AC}^0[2]$-soundness. In particular, we construct an $\mathsf{AC}^0[2]$-computable correlation-intractable hash family for constant-degree polynomials against $\mathsf{AC}^0[2]$ adversaries, assuming $\oplus \mathsf{L}/\mathsf{poly} \not\subseteq \widetilde{\mathsf{Sum}}_{n^{-c}} \circ \mathsf{AC}^0[2]$ for some $c > 0$. This is incomparable to all currently-known constructions, which are typically useful for larger classes and against stronger adversaries, but based on arguably stronger assumptions. Our construction is inspired by the Fiat-Shamir hash function by Peikert and Shiehian (CRYPTO '19) and the fully-homomorphic encryption scheme against bounded-depth adversaries by Wang and Pan (EUROCRYPT '22).
+
+<br><br>On the negative side, we show Fiat-Shamir for arguments is still impossible to achieve against bounded-depth adversaries. In particular,
+
+<br><br>* Assuming the existence of $\mathsf{AC}^0[2]$-computable CRHF against p.p.t. adversaries, for every poly-size hash function, there is a (p.p.t.-sound) interactive argument that is not $\mathsf{AC}^0[2]$-sound after applying Fiat-Shamir with this hash function.
+
+<br><br>* Assuming the existence of $\mathsf{AC}^0[2]$-computable CRHF against $\mathsf{AC}^0[2]$ adversaries, there is an $\mathsf{AC}^0[2]$-sound interactive argument such that for every hash function computable by $\mathsf{AC}^0[2]$ circuits,
+the argument does not preserve $\mathsf{AC}^0[2]$-soundness when applying Fiat-Shamir with this hash function. This is a low-depth variant of Goldwasser and Kalai.
+</i></p>
+
+<li>Weak Zero-Knowledge and One-Way Functions (Rohit Chatterjee, Yunqi Li, Prashant Nalini Vasudevan)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+We study the implications of the existence of weak Zero-Knowledge (ZK) protocols for worst-case hard languages. These are protocols that have completeness, soundness, and zero-knowledge errors (denoted $\epsilon_c$, $\epsilon_s$, and $\epsilon_z$, respectively) that might not be negligible. Under the assumption that there are worst-case hard languages in $\mathsf{NP}$, we show the following:
+
+<br><br>1. If all languages in $\mathsf{NP}$ have NIZK proofs or arguments satisfying $\epsilon_c+\epsilon_s+\epsilon_z < 1$, then One-Way Functions (OWFs) exist.  
+This covers all possible non-trivial values for these error rates. It additionally implies that if all languages in $\mathsf{NP}$ have such NIZK proofs and $\epsilon_c$ is negligible, then they also have NIZK proofs where all errors are negligible. Previously, these results were known under the more restrictive condition $\epsilon_c+\sqrt{\epsilon_s}+\epsilon_z < 1$ (Chakraborty et al., CRYPTO 2025). 
+
+<br><br>2. If all languages in $\mathsf{NP}$ have $k$-round public-coin ZK proofs or arguments satisfying $\epsilon_c+\epsilon_s+(2k-1)\cdot\epsilon_z<1$, then OWFs exist.
+
+<br><br>3. If, for some constant $k$, all languages in $\mathsf{NP}$ have $k$-round public-coin ZK proofs or arguments satisfying $\epsilon_c+\epsilon_s+k\cdot\epsilon_z<1$, then infinitely-often OWFs exist.
+</i></p>
+
+</ul>
+</td>
+</tr>
+
+<tr><td> 12:30pm - 2:00pm </td> <td> Lunch (provided) </td></tr>
+<td> 2:00pm - 3:40pm </td>
+ <td> <b> Session 3: Extractors and Leakage Resilience</b>
+<ul>
+<li>Tighter Bounds for the Oblivious Bit-Fixing Inner Product Extractor on Biased Seeds (Jack Doerner, Lawrence Roy)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>The *Inner Product Extractor* (IPE) of Impagliazzo, Levin, and Luby (STOC'89) takes a seed $h\in\mathbb{F}^\gamma$ and a source $x\in\{0,1\}^\gamma$ for some $\gamma\in\mathbb{N}$ and produces $\langle h,x \rangle$ with error $\varepsilon=SD((\langle\mathcal{H},\mathcal{X}\rangle,\mathcal{H}),(\mathcal{Y},\mathcal{H}))$ such that
+\[\varepsilon\le\frac{1}{2}\sqrt{|\mathbb{F}|^{\gamma}/2^{H_\infty(\mathcal{H})}}\,\,\sqrt{|\mathbb{F}|/2^{H_\infty(\mathcal{X})}}\]
+where $\mathcal{Y}$ is the uniform distribution over $\mathbb{F}$, and $\mathcal{H}$ and $\mathcal{X}$ are the independent but possibly *non-uniform* distributions from which $h$ and $x$ are drawn, respectively. In other words, the IPE's error grows with the square root of seed bias, at most. This square root arises because prior works bound the squared error using the 2-universality of the IPE. The analysis requires an even power of the error, and the IPE is not $4$-universal.
+
+<br><br>Motivated by applications to multiparty computation, we revisit the problem of the IPE with biased seeds and prove far tighter bounds on the influence of seed bias by bypassing universal hashing. We first prove an *Elevated* General Leftover Hash Lemma, which yields an $n^{\text{th}}$ root bound for functions that are *almost* $n$-universal. Bounding number of inputs on which the IPE is not 4-universal yields $\varepsilon=SD((\langle\mathcal{H},\mathcal{W}\rangle,\mathcal{H}),(\mathcal{Y},\mathcal{H}))$ where
+\[
+\varepsilon\lesssim\frac{2.1}{2}\left(|\mathbb{F}|^\gamma/2^{H_\infty(\mathcal{H})}\right)^{\frac14} \sqrt{|\mathbb{F}|/2^{H_\infty(\mathcal{W})}}
+\]
+for any *oblivious bit-fixing* source $\mathcal{W}$ with $2^{0.585 H_\infty(\mathcal{W})} \le |\mathbb{F}| \le 2^{H_\infty(\mathcal{W})}$(. Next, we use matroid theory to *directly* analyze the $n$-way multicollision probability of the IPE, yielding an asymptotic bound for any even $n$. For $n\ge4$, $0 < \epsilon \le 0.83/(n - 2)$, and $|\mathbb{F}| \le 2^{(1 - \epsilon)\cdot H_\infty(\mathcal{W})}$, as $|\mathbb{F}|\to\infty$,
+\[
+\varepsilon
+\le\frac{(n - 1)}{2}\left({|\mathbb{F}|}^\gamma/2^{H_\infty(\mathcal{H})}\right)^{\frac1n} \sqrt{\vphantom{/}2^{-\epsilon\cdot H_\infty(\mathcal{W})}}\,\, (1 + o(1)).
+\]
+Computing a *concrete* version of this bound requires time exponen\-tial in $n$. We compute concrete $\{4,6,8\}^{\text{th}}$-root bounds and demonstrate that no one choice of $n$ is optimal. Finally, we introduce a new class of *seed-adaptive* oblivious bit-fixing sources, extend our results to such sources, and use this extension to fix a bug that we identify in the proof of the oblivious linear evaluation protocol of Doerner et al. (SP'24).
+</i></p>
+
+<li>Fast Bounded-Independence Functions and Their Duals (Martijn Brehm, Yuval Ishai, Nicolas Resch)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+We continue the study of *fast* functions, computable by linear-size circuits, that share useful properties of random functions. Motivated by cryptographic applications, we generalize and improve on previous results in this area, obtaining the following results:
+
+<br><br>* For any constant $t$, we construct a fast $t$-wise independent hash function with algebraic degree $\log_2 t$ (over $\mathbb{F}_2$), simultaneously optimizing both asymptotic circuit size and degree.
+
+<br><br>* We simplify and improve a recent construction (ITCS 2026) of a family of fast codes with fast duals, both meeting the Gilbert-Varshamov bound. Unlike the previous construction, our construction has negligible failure probability, can accommodate general fields and rates, supports a systematic encoding, and admits fast universal encoders.
+
+<br><br>* We strengthen the above to support stronger random-like properties, such as optimal combinatorial list-decoding. This is achieved by constructing, for any constant $t$, a family of fast linear functions that map any $t$ linearly independent inputs to uniform and statistically independent outputs. Prior to our work, this was only known for $t=1$.
+
+<br><br> We demonstrate the usefulness of the above results to cryptography. This includes the first nontrivial protocols for perfectly secure multiparty computation whose circuit complexity scales linearly with the number of parties, as well as protocols for computing encrypted matrix-vector products with optimal asymptotic circuit complexity.
+
+</i></p>
+
+<li>Resilience of Inner-Product Masking Scheme against Hamming Weight Leakage (Aniruddha Biswas, Jihun Hwang, Hemanta K. Maji, Xiuyu Ye)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+Additive masking is a widely used countermeasure against side-channel attacks in which a secret is additively split into multiple random shares. 
+However, over binary fields, the number of $1$'s in the binary representation (i.e., the Hamming weight) of the shares reveals information about the original secret.
+Inner-product masking scheme has been proposed as a promising alternative that is secure against such information leakage.
+
+<br><br>In this work, we establish that inner-product masking over a binary extension field is provably secure against Hamming weight leakage, and it translates into security against arbitrary symmetric function leakage from the shares.
+In addition, we present an efficiently computable score function that quantifies its security against leakages, enabling users to test and certify its security. 
+Finally, we derive a relationship between the leakage resilience of inner-product masking and additive masking over arbitrary fields; roughly speaking, they are at least as secure as additive masking.
+Our approach is Fourier-analytic and involves estimating spectral norms of the Hamming slice by studying Krawtchouk polynomials.
+
+</i></p>
+
+<li>Partial Derandomization for Leakage-Resilient Shamir’s Secret Sharing over Composite Order Fields (S. Venkitesh)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+We make progress on the question of constructing explicit evaluation places for leakage-resilient Shamir's secret sharing, over composite order fields.  Previously, Maji et al. (EUROCRYPT 2024) showed that random evaluation places yield Shamir's secret sharing over the composite order field \(\mathbb{F}_{p^d}\) that is statistically secure against physical bit leakage.  Later, Nguyen (EUROCRYPT 2025) established a *dichotomy* that linear code-based secret-sharing scheme over the field \(\mathbb{F}_{p^d}\) is either statistically secure or completely insecure against such leakage.
+
+<br><br>Building upon Nguyen's dichotomy, we present a partial derandomization of evaluation places, improving upon the Maji et al. result for a restricted regime of parameters.  We replace the random choice of \(n\) independent evaluation places by the iterates \(x_j = \Phi^j(x_0)\) of a simple fixed rational function \(\Phi\), where the initial point \(x_0 \in \mathbb{F}_{p^d}^*\) is randomly chosen.  The randomness in the evaluation places thus drops from \(nd \log p\) bits to \(d\log p\) bits.  Our construction is valid for the regime \(n = O(d/\log_p d)\), and any reconstruction threshold \(k \ge 2\); in fact, the scheme attains perfect security (statistical distance exactly zero) against single-block leakage.
+
+<br><br>Building on Nguyen's dichotomy, our technique is a partial-fraction non-degeneracy argument that exploits the distinct poles of the rational iterates.
+</i></p>
+
+</ul>
+</td>
+</tr>
+<tr> <td>3:40pm - 4:10pm </td><td>Break (catered)</td></tr>
+<td> 4:10pm - 5:50pm </td>
+ <td> <b> Session 4: Data Privacy and Data Deletion</b>
+<ul>
+<li><b><u>Spotlight Talk:</u></b> Towards an (Information-Theoretic) Theory of Attacks on Data Privacy (Adam D. Smith)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+I'll survey some recent and not-so-recent theoretical work
+on attacks on data privacy. The basic thesis is that these attacks
+play a similar role in the design of privacy-preserving algorithms to
+that played by cryptanalysis in the design of secure encryption
+schemes: they provide natural lower bounds for frameworks like
+differential privacy and also help us understand why nontrivial
+protections are necessary at all.
+
+<br><br>Based on joint work with, among others: Mahdi Haghifam and Jon Ullman
+(2025); Gavin Brown, Mark Bun, Vitaly Feldman and Kunal Talwar (2021 &
+2022); Cynthia Dwork, Thomas Steinke, Jon Ulllman and Salil Vadhan
+(2015).
+
+</i></p>
+
+<li><b><u>Spotlight Talk:</u></b> How to Sketch a Learning Algorithm (Sam Gunn)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+How does the choice of training data influence an AI model? This question is of central importance to interpretability, privacy, data attribution, and basic science. At its core is the data deletion problem: after a reasonable amount of precomputation, quickly predict how the model would behave if a given subset of training data had been deleted.
+
+<br><br>I will present a data deletion scheme capable of predicting model outputs to arbitrary precision in the deep learning setting. A bound on the error can be derived from a simple assumption about the stability of the AI model. In contrast to the assumptions made by prior work, ours appears to be fully compatible with deep learning.
+
+<br><br>We believe that this method opens up a range of new possibilities for theory in AI. For instance, it gives the first machine unlearning scheme with provable security in the deep learning setting.
+</i></p>
+
+</ul>
+</td>
+</tr>
+<tr>
+<td> ??? - ???</td><td> Saturday Evening Event </td></tr>
+</tr>
+</table>
+<br>
+<br>
+
+<h4 style="margin:0 0 6px;color:#8B0000">Sunday August 16</h4>
+<table>
+<td> 9:05am - 10:45am</td>
+<td> <b> Session 5: MPC</b>
+<ul>
+
+<li>Adaptive Garbled Circuits and Garbled RAM from Non-Programmable Random Oracles (Cruz Barnum, David Heath, Vladimir Kolesnikov, Rafail Ostrovsky)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+Garbled circuit techniques secure in the adaptive setting -- where inputs are chosen after a garbled program is sent -- are motivated by practice, but they are  difficult to achieve. Prior adaptive garbling is either impractically expensive or encrypts the garbled program with the output of a programmable random oracle (PRO).
+This latter approach introduces a strong model *and* incurs
+computational overhead.
 
 <br><br>
+
+We present a simple framework for proving adaptive security of garbling schemes in the non-programmable random oracle (NPRO) model. NPRO is a milder model than PRO, and it is close to the assumption required by the widely used Free XOR extension. Our framework is applicable to a number of existing GC techniques, which are proved adaptively secure *without modification* (and hence incurring no overhead).
+
+<br><br>
+
+As our main application, we construct and prove adaptively secure a garbling scheme for *tri-state circuits*, a model that captures both Boolean circuits and RAM programs (Heath et al., Crypto 2023). For TSC $C$, our garbling of $C$ is at most $|C|\cdot \lambda$ bits long, for security parameter $\lambda$. This implies both an adaptively secure garbled Boolean circuit scheme, and an adaptively secure garbled RAM scheme where the garbling of a $T$-step RAM program has size $O(T \cdot \log^3 T \cdot \log \log T \cdot \lambda)$ bits.  
+
+<br><br>
+
+Our scheme is concretely efficient: its Boolean circuit handling matches the performance of half-gates, and it is adaptively secure from NPRO.
+</i></p>
+
+<li>Compressing Correlations via Secret Replication: PCFs from Symmetric Cryptography (Yuval Ishai, Hugo Krawczyk, Tal Rabin)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+We revisit the question of securely compressing multiparty correlations using only symmetric cryptography. A *linear correlation* $\cal C$, defined by a linear subspace $C\subseteq \mathbb{F}^n$, samples a secret random $\mathbf{c}\in C$ and assigns to each party a fixed subset of the entries of $\mathbf{c}$. Gilboa and Ishai (Crypto 1999) and Cramer, Damg{\aa}rd and Ishai~(TCC 2005) provide a general technique for securely compressing many independent samples from $\cal C$ by replicating independent keys of a pseudorandom function (PRF) among the parties. This implies a *pseudorandom correlation function* (PCF) for $\cal C$ from any PRF, where the PCF key size scales with the number of minimal-support codewords in $C$.
+
+<br><br>We observe that the above generalizes to other types of useful target correlations $\mathcal{C}_T$ by using a *secret* replication pattern obtained via a random secret assignment of parties in $\mathcal{C}$ to parties in $\mathcal{C}_T$. 
+
+<br><br>We present several corollaries of this general blueprint. These include a re-derivation of two-party PCF constructions for VOLE and subfield-VOLE over small domains (Roy, Crypto 2022) as well as new multiparty PCFs for small-domain VOLE-style correlations, including scalar-vector multiplication triples and their authenticated variants. Finally, we discuss applications to secure computation.
+</i></p>
+
+<li>Towards Characterizing Secure Samplability (Hari Krishnan P. Anilkumar, Keval Jain, Manoj Prabhakaran, Vinod M. Prabhakaran)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+This work deals with the fundamental problem of characterizing which multiparty
+distributions can be securely sampled with information-theoretic security
+against passive corruption, when there is no setup or honest-majority. We focus
+on the case of 4-party distributions with boolean outputs for each party. We
+show that such a distribution is securely samplable if and only if every 2-party
+distribution derived from it by partitioning the parties into two sets is
+securely samplable. This extends a similar characterization previously known for 3-party
+distributions.
+</i></p>
+
+<li><u>Highlights Talk:</u> Shuffling is Universal: Statistical Additive Randomized Encodings for All Functions (Saroja Erabelli)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract:<i> The shuffle model is a widely used abstraction for non-interactive anonymous communication. It allows $n$ parties holding private inputs $x_1,\dots,x_n$ to simultaneously send messages to an evaluator, so that the messages are received in a random order. The evaluator can then compute a joint function $f(x_1,\dots,x_n)$, ideally while learning nothing else about the private inputs. The model has become increasingly popular both in cryptography, as an alternative to non-interactive secure computation in trusted setup models, and even more so in differential privacy, as an intermediate between the high-privacy, little-utility *local model* and the little-privacy, high-utility *central curator model*.
+
+<br><br>The main open question in this context is which functions $f$ can be computed in the shuffle model with *statistical security*. While general feasibility results were obtained using public-key cryptography, the question of statistical security has remained elusive. The common conjecture has been that even relatively simple functions cannot be computed with statistical security in the shuffle model.
+
+<br><br>We refute this conjecture, showing that *all* functions can be computed in the shuffle model with statistical security. In particular, any differentially private mechanism in the central curator model can also be realized in the shuffle model with essentially the same utility, and while the evaluator learns nothing beyond the central model result.
+
+<br><br>This feasibility result is obtained by constructing a statistically secure *additive randomized encoding* (ARE) for any function. An ARE randomly maps individual inputs to group elements whose sum only reveals the function output. Similarly to other types of randomized encoding of functions, our statistical ARE is efficient for functions in $\mathsf{NC^1}$ or $\mathsf{NL}$. Alternatively, we get computationally secure ARE for all polynomial-time functions using a one-way function. More generally, we can convert any (information-theoretic or computational) “garbling scheme” to an ARE with a constant-factor size overhead.
+
+<br><br>Joint work with Nir Bitansky, Rachit Garg, and Yuval Ishai.</i></p>
+
+</ul>
+</td>
+</tr>
+<tr><td> 10:45am - 11:15am </td> <td> Break (catered) </td></tr>
+<tr>
+<td> 11:15am - 12:30pm</td>
+<td> <b> Session 6: Private Information Retrieval and Private Constrained Limits</b>
+<ul>
+<li><u>Highlights Talk:</u> Catalytic Tree Evaluation From Matching Vectors	(Seyoon Ragavan)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>What is the relative computational power of time and space? Finding low-space algorithms for tree evaluation (TreeEval) has become a central direction for understanding this question, especially after its application by Williams (STOC 2025) to prove a landmark result on simulating time with square-root space.
+
+<br><br>One existing approach to solving TreeEval in low space is the algorithm by J. Cook and Mertz (STOC 2024) running in slightly super-logarithmic space $O(\log n \log \log n)$ and super-polynomial time $n^{O(\log \log n)}$. Another approach starts by putting a twist on the low-space model and working in the catalytic-computing model: the algorithm is also given a large hard drive (catalytic space) that is already full, and can use this hard drive as long as it is ultimately returned to its initial state. In this model, Buhrman et al. (STOC 2014) gave a catalytic algorithm for TreeEval running in logarithmic $O(\log n)$ free space and $\mathsf{poly}(n)$ time, but with catalytic space also $\mathsf{poly}(n)$.
+
+<br><br>We show a new algorithm for TreeEval that improves on the Buhrman et al. result and is incomparable to the Cook-Mertz result. show that the latter result can be improved. Specifically, we give a catalytic algorithm for TreeEval with $O(\log n)$ free space, $\mathsf{poly}(n)$ time, and subpolynomial catalytic space $2^{\log^{\epsilon} n}$ (for any $\epsilon > 0$). Our result opens a new line of attack on putting TreeEval in $\mathsf{logspace}$, and immediately implies an improved simulation of time by catalytic space via the aforementioned reduction of Williams.
+
+<br><br>The most important message of this talk will be the connection we drew between private information retrieval (PIR) and TreeEval to arrive at this result. The crux of both problems is to evaluate some function on a masked input. In catalytic computing, the mask comes from the initial contents of the catalytic hard drive; in private information retrieval, the mask is sampled randomly by the client to ensure privacy. The Cook-Mertz algorithm can be thought of as leveraging the Reed-Muller PIR, while ours uses matching-vector PIR. We will not assume any prior knowledge of catalytic algorithms or tree evaluation.
+
+<br><br>Based on joint work (ePrint:2026/265) with Alexandra Henzinger (MIT) and Edward Pyne (MIT).</i></p>
+
+<li><u>Highlights Talk:</u> Two-Server Private Information Retrieval in Sublinear Time and Quasilinear Space (Seyoon Ragavan)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract:<i> In this talk, we build two-server private information retrieval (PIR) that achieves information-theoretic security and strong double-efficiency guarantees. On a database of $n > 10^6$ bits, the servers store a preprocessed data structure of size $1.5 * \sqrt(\log_2 n) * n$ bits and then answer each PIR query by probing $12 n^{0.82}$ bits in this data structure. To our knowledge, this is the first information-theoretic PIR with any constant number of servers that has quasilinear server storage $n^{1 + o(1)}$ and polynomially sublinear server time $n^{1 - \Omega(1)}$.
+
+<br><br>Our protocol is also concretely efficient; on an 11 GB database with 1-byte records, our two-server PIR encodes the database into a 1 TB data structure – which is 4,500,000x smaller than that of prior two-server PIR-with-preprocessing schemes, while maintaining the same communication and time per query. To answer a PIR query, the servers fetch and send back 4.4 MB from this data structure, requiring 2,560x fewer memory accesses than linear-time PIR.
+
+<br><br>Our work builds on the PIR-with-preprocessing protocol of Beimel, Ishai, and Malkin (CRYPTO 2000). The insight driving our improvement is a compact data structure for evaluating a multivariate polynomial and its derivatives, leveraging the fact that Hasse derivatives can be efficiently computed on-the-fly by taking finite differences between the polynomial's evaluations.
+
+<br><br>Based on joint work (Eurocrypt 2026, ePrint:2025/2008) with Alexandra Henzinger (MIT).</i></p>
+
+<li>Limits on the Power of Private Constrained PRFs (Mengda Bi, Yaohua Ma, Chenxin Dai)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+Private constrained PRFs are constrained PRFs where the constrained key hides information about the predicate circuit. Although there are many constructions and applications of PCPRF, its relationship to basic cryptographic primitives, such as one-way functions and public-key encryptions, has been unclear. For example, we don't know whether one-way functions imply PCPRFs for general predicates, nor do we know whether 1-key secure PCPRF for all polynomial-sized predicates imply public-key primitives such as public-key encryption and secret-key agreement.
+
+<br><br>In this work, we prove the black-box separation between a 1-key secure PCPRF for any predicate and a secret-key agreement, which is the first black-box separation result about PCPRF. Specifically, we prove that there exists an oracle relative to which 1-key secure PCPRFs exist while secret-key agreement does not. Our proof is based on the simulation-based technique proposed by Impagliazzo and Rudich (STOC 89). The main technical challenge in generalizing the simulation-based technique to PCPRF is the issue of \textit{unfaithfulness} of Eve's simulation to the real world because our oracle is more complicated than a random oracle. We introduce a new technique which we call the ``weighting'' technique and show how to leverage it to circumvent the issue of unfaithfulness in the proof framework of Impagliazzo and Rudich.
+</i></p>
+</ul>
+</td>
+</tr>
+
+<tr><td> 12:30pm - 2:00pm </td> <td> Lunch (provided) </td></tr>
+<td> 2:00pm - 3:40pm </td>
+ <td> <b> Session 7: Proximity Gaps and Subspace Designs</b>
+<ul>
+<li><b><u>Spotlight Talk:</u></b> The Proximity Prize: What it is and What is Currently Known (Dan Boneh)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+The Ethereum Foundation recently announced the Proximity Prize which aims to resolve some open questions that play an important role in the design of succinct code-based proof systems. In this talk we will define the core questions that the Proximity Prize aims to resolve. We will survey what is currently known, and why these questions are important to the design of proof systems. This is joint work with Gal Arnon and Giacomo Fenzi available at eprint.iacr.org/2026/680.
+</i></p>
+
+<li><b><u>Spotlight Talk:</u></b> The Power of Subspace Designs: Optimal List Decoding, Proximity Gaps, and More (Venkatesan Guruswami)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>
+A subspace design is a collection of linear subspaces with a pseudorandomness property: no low-dimensional subspace has a large total intersection dimension with the collection. Subspace designs were originally introduced as a derandomization tool in coding theory, where they were used to precode algebraic codes and improve their list-decodability, and subsequently found several applications in linear-algebraic pseudorandomness.
+
+<br><br>Intriguingly, near-optimal constructions of subspace designs are themselves built from algebraic codes such as folded Reed-Solomon and multiplicity codes. Several recent works have revealed an exciting reverse connection: these codes, by virtue of their subspace design properties, admit optimal list-size bounds for list decoding, optimal proximity gaps, and random-like local behavior. The proximity-gap questions are particularly relevant to modern proof systems, including IOPs and SNARKs. I will also briefly mention a surprising recent appearance of subspace designs in the NC algorithm for bipartite perfect matching.
+
+<br><br>The talk will survey this circle of ideas and explain how subspace designs have become a powerful unifying tool for derandomization in coding theory and theoretical computer science.
+</i></p>
+
+</ul>
+</td>
+</tr>
+<tr> <td>3:40pm - 4:10pm </td><td>Break (catered) </td></tr>
+<td> 4:10pm - 5:25pm </td>
+ <td> <b> Session 8:  Error Correcting Codes and Matrix Commitments</b>
+<ul>
+<li><b><u>Spotlight Talk:</u></b> Improved Error Correction for Efficiently Computable Errors (Daniel Wichs)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>This talk surveys recent constructions of error-correcting
+codes that achieve better parameters than what is
+information-theoretically possible, under the natural restriction that
+the error pattern is efficiently computable in polynomial time. We
+will cover:
+
+<br><br>* A simple construction of such codes over large (constant size)
+alphabets with essentially optimal parameters under minimal hardness
+assumptions. These codes can correct a $p < 1/2$ fraction of errors with
+rate $R = 1-p$. (ITCS '25)
+
+<br><br>* How to get unique decoding over the binary alphabet with essentially
+the same parameters as the best information-theoretic list-decodable
+codes, under standard crypto assumptions. (Eurocrypt '25, FOCS '25)
+
+<br><br>* How to get unique decoding over the binary alphabet achieving
+Shannon capacity $R = 1- H(p)$ for $p < 1/4$ fraction of errors, where $H$
+is the binary entropy function. This holds under strong but plausible
+crypto assumptions. (CRYPTO '26)
+
+<br><br>Overall, these results show that we can achieve essentially the same
+parameters for worst-case computationally bounded errors as for random
+errors, as long as the fraction of errors is inherently bounded by $p < 1/4$
+for the binary alphabet or $p < 1/2$ for large alphabets.
+
+<br><br>Based on joint works with Jad Silbak and George Lu.</i></p>
+
+<li><u>Highlights Talk:</u> Succinct Matrix Commitments and their Applications (David Wu)
+<br><p class="abstract" style="padding: 5px; border: 1px solid black;">Abstract: <i>In this talk, I will provide an overview of succinct matrix commitments and survey the many advanced cryptographic capabilities they have recently enabled from lattice-based assumptions. These include primitives like broadcast encryption, silent threshold encryption, functional commitments, secure group messaging protocols, and more.</i></p>
+
+</ul>
+</td>
+</tr>
+<tr>
+<td> 5.30pm - ???</td><td> Crypto 2026 Reception (Location: TBD)</td></tr>
+</tr>
+
+</table>
+
+<br>
 </div>
 </div>
 
