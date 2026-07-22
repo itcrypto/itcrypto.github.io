@@ -1,104 +1,131 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
 
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Information-Theoretic Cryptography Conference</title>
-<meta name="description" content="Information-Theoretic Cryptography Conference.">
-
-<link href="../css/bootstrap-flatly.css" rel="stylesheet">
-<link rel="stylesheet" href="../css/custom.css">
-<link rel="canonical" href="https://itcrypto.github.io/">
-<link rel="alternate" type="application/rss+xml" title="Information-Theoretic Cryptography Conference" href="https://itcrypto.github.io/feed.xml">
-
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-    extensions: ["tex2jax.js"],
-    jax: ["input/TeX", "output/HTML-CSS"],
-    tex2jax: {
-    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-    displayMath: [ ['$$','$$'], ["\[","\]"], ["\\[","\\]"] ],
-    processEscapes: true
-    },
-    messageStyle: "none",
-    "HTML-CSS": { availableFonts: ["TeX"] }
-    });
-  </script>
-  <script type="text/javascript" src="../css/MathJax.js"></script>
-
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>ITC 2026 Call for Papers</title>
+<meta content="Call for Papers for ITC 2026, including research scope, publication information, conference tracks, conflicts of interest, and author resources." name="description"/>
+<meta content="#0b2035" name="theme-color"/>
+<meta content="website" property="og:type"/>
+<meta content="ITC 2026 Call for Papers" property="og:title"/>
+<meta content="Call for Papers for ITC 2026, including research scope, publication information, conference tracks, conflicts of interest, and author resources." property="og:description"/>
+<meta content="Information-Theoretic Cryptography" property="og:site_name"/>
+<link href="https://itcrypto.github.io/2026/2026cfp.html" rel="canonical"/>
+<link href="../assets/favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../assets/css/site.css" rel="stylesheet"/>
+<script defer="" src="../assets/js/site.js"></script>
 </head>
+<body class="cfp-page">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<aside aria-label="Registration deadline" class="deadline-banner">
+<div class="shell deadline-banner__inner">
+<p><strong>Early registration ends July 26.</strong> Register for ITC through the CRYPTO 2026 affiliated-event registration process.</p>
+<a class="text-link text-link--dark" href="https://crypto.iacr.org/2026/registration.php">Register now <span aria-hidden="true">→</span></a>
+</div>
+</aside>
+<header class="site-header" data-site-header="">
+<div class="shell site-header__inner">
+<a aria-label="Information-Theoretic Cryptography home" class="brand" href="../index.html">
+<img alt="" class="brand-mark" src="../assets/itc-mark.svg"/>
+<span class="brand__text"><strong>ITC</strong><span>Information-Theoretic Cryptography</span></span>
+</a>
+<button aria-controls="site-navigation" aria-expanded="false" class="nav-toggle" type="button">
+<span class="sr-only">Toggle navigation</span>
+<span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>
+</button>
+<nav aria-label="Primary navigation" class="site-nav" id="site-navigation">
+<a href="../index.html">Home</a>
+<a href="../2026/index.html">ITC 2026</a>
+<a href="../2026/2026prog.html">Program</a>
+<a href="../2026/2026Accepted.html">Accepted Papers</a>
+<a aria-current="page" class="is-active" href="../2026/2026cfp.html">Call for Papers</a>
+<a href="../2026/2026submit.html">Submission</a>
+<a href="../past.html">Past ITCs</a>
+<a href="../steering.html">Steering</a>
+</nav>
+<a class="button button--small site-header__cta" href="https://crypto.iacr.org/2026/registration.php">Register</a>
+</div>
+</header>
+<main id="main-content">
+<section class="page-hero">
+<div class="shell page-hero__grid">
+<div>
+<p class="eyebrow">ITC 2026</p>
+<h1>Call for Papers</h1>
+<p class="page-hero__lede">ITC solicits original research on information-theoretic security, its mathematical foundations, and the computational and quantum settings informed by its techniques.</p>
+</div>
+<aside class="page-hero__aside status-card"><span class="status-pill status-pill--closed">Submissions closed</span><dl><div><dt>Deadline</dt><dd>March 16, 2026 (AoE)</dd></div><div><dt>Notification</dt><dd>May 8, 2026</dd></div><div><dt>Conference</dt><dd>August 15–16, 2026</dd></div></dl></aside>
+</div>
+</section>
+<section class="section">
+<div class="shell content-layout">
+<article class="prose">
+<p class="lead">Papers on all technical aspects of information-theoretic cryptography and related topics were invited for peer review, publication in the open-access proceedings, and presentation at ITC 2026.</p>
+<p>More broadly, authors are encouraged to bring work in theoretical cryptography into an ITC-suitable form—for example, by isolating the information-theoretic core of a result or presenting a simplified variant in an idealized model.</p>
+<div class="callout"><h2>Publication</h2><p>Accepted publication-track papers will appear in <a href="https://www.dagstuhl.de/en/publishing/series/details/lipics">LIPIcs — Leibniz International Proceedings in Informatics</a> under an open-access license. A selected subset will be invited for submission to the <em>Journal of Cryptology</em>.</p></div>
+</article>
+<aside class="side-card"><p class="eyebrow">Author resources</p><h2>Submission details</h2><p>Review the manuscript expectations, originality policy, and presentation requirements.</p><a class="button button--full" href="2026submit.html">Submission instructions</a></aside>
+</div>
+</section>
+<section class="section section--tint">
+<div class="shell">
+<div class="section-heading"><div><h2>Topics of interest</h2></div><p>The list is intentionally non-exhaustive; closely related work is welcome.</p></div>
+<div class="topic-grid"><article class="topic-card topic-card--compact"><h3>Foundations &amp; proofs</h3><ul><li>Randomness extraction and privacy amplification</li><li>Information-theoretic proof systems</li><li>Information-theoretic reductions</li><li>Information-theoretic tools in computational reductions, including black-box separations and lower bounds</li><li>Provable symmetric-key cryptography through information-theoretic analysis, including modes of operation, hash functions, and time-space tradeoffs</li></ul></article><article class="topic-card topic-card--compact"><h3>Privacy &amp; secure computation</h3><ul><li>Secret sharing and secure multi-party computation</li><li>Differential privacy</li><li>Oblivious data structures</li><li>Private information retrieval and locally decodable codes</li></ul></article><article class="topic-card topic-card--compact"><h3>Codes, channels &amp; resilience</h3><ul><li>Bounded-storage cryptography</li><li>Authentication codes and non-malleable codes</li><li>Adversarial and noisy channels</li><li>Information-theoretic foundations of physical-layer security</li></ul></article><article class="topic-card topic-card--compact"><h3>Quantum &amp; idealized models</h3><ul><li>Quantum cryptography with unconditional security</li><li>Idealized models, including random-oracle and generic-group models, tamper-proof hardware, and ideal obfuscation</li><li>New information-theoretic primitives and their computational analogues</li></ul></article></div>
+</div>
+</section>
+<section class="section">
+<div class="shell">
+<div class="section-heading"><div><h2>Conference tracks</h2></div></div>
+<div class="track-grid">
+<article class="track-card"><span class="track-number">01</span><h3>Publication track</h3><p>Papers selected from conference submissions by the program committee, published in the proceedings, and presented at ITC.</p></article>
+<article class="track-card"><span class="track-number">02</span><h3>Spotlight track</h3><p>Invited survey talks highlighting particularly exciting recent advances in information-theoretic cryptography. These talks are not published in the proceedings.</p></article>
+<article class="track-card"><span class="track-number">03</span><h3>Highlights track</h3><p>Invited talks—typically by students and postdocs—on recent ITC-related work appearing across major theory and cryptography venues.</p></article>
+</div>
+<div class="nomination-panel"><div><h3>Community nominations</h3><p>Self-nominations were welcome for both the spotlight and highlights tracks. Nominations are handled by the program chair.</p></div><a class="text-link" href="mailto:itcrypto2026@gmail.com">itcrypto2026@gmail.com <span aria-hidden="true">→</span></a></div>
+</div>
+</section>
+<section class="section section--soft">
+<div class="shell narrow prose">
 
-<body>
-  <div class="jumbotron">
-  <div class="container">
-  <h2>
-  <b>Conference on Information-Theoretic Cryptography (ITC)</b></h2>
-  </div>
-  </div>
-
-
-  <div class="container">
-  <div class="row">
-  <div class="col-md-2">
-  <ul class="nav nav-pills nav-stacked">
-    <li><a href="../index.html">Home</a></li>
-  <li><a href="index.html">ITC 2026</a></li>
-    <li><a href="2026cfp.html">Call for Papers</a></li>
-  <li><a href="2026submit.html">Paper Submission</a></li>
-    <li><a href="2026Accepted.html">Accepted Papers</a></li>
-    <li><a href="2026prog.html">Program</a></li>
-  <li><a href="../past.html">Past ITCs</a></li>
-  <li><a href="../steering.html">Steering Committee</a></li>
-  </ul><p><br><p>
-  In Cooperation With<br> <img src="../iacrlogo.png">
-  </div>
-
-  <div class="col-md-10">
-       
-<h3 style="margin:10px 10px 10px"><b>ITC 2026: Call For Papers</b></h3>    
-
-<p>Topics of interest include, but are not restricted to:</p>
-<ul>
-    <li>Randomness extraction and privacy amplification</li>
-    <li>Secret sharing and Secure multi-party computation</li>
-    <li>Information-theoretic proof systems</li>
-    <li>Differential privacy</li>
-    <li>Quantum cryptography with unconditional security</li>
-    <li>Oblivious data structures</li>
-    <li>Idealized models (e.g., random oracle, generic group models, tamper-proof hardware and ideal obfuscation)</li>
-    <li>Bounded-storage cryptography</li>
-    <li>Private information retrieval and locally-decodable codes</li>
-    <li>Authentication codes and non-malleable codes</li>
-    <li>Adversarial and noisy channels</li>
-    <li>Information-theoretic reductions</li>
-    <li>Information-theoretic foundations of physical-layer security</li>
-    <li>New information-theoretic primitives and their computational analogues</li>
-    <li>Information-theoretic tools in computational reductions including black-box separations and lower bounds</li>
-    <li>Provable symmetric key cryptography via information-theoretic analysis (e.g., modes of operation, hash functions, time-space trade-offs, etc).</li>
-</ul>
-
-<p>More broadly, authors are encouraged to bring their works in the theory of cryptography into an ITC-suitable form by distilling the information-theoretic core of the main result, by introducing a simplified variant of the result in an ideal model, etc.</p>
-
-<p>Papers on all technical aspects of these and related topics are solicited for submission. Papers will be peer reviewed, and accepted papers will be published in conference proceedings and presented at the conference. The proceedings will be published by LIPIcs – Leibniz International Proceedings in Informatics under an open access license.</p>
-
-<p>Potential conflicts of interest include past advisors and students, people with the same affiliation in the last 2 years, any recent (2 papers in ~2 years) coauthors and collaborators, and family members.</p>
-
-<p>Selected (i.e., a subset of accepted) papers will be invited to be submitted to the Journal of Cryptology.</p>
-
-<p>Continuing the successful format from previous years, the conference will feature a publication track, a spotlight track and a highlights track.</p>
-
-<p>The publication track consists of papers selected among the conference submissions by the program committee for publication in the proceedings and presentation at the conference.</p>
-
-<p>The spotlight track consists of invited talks (not published in the proceedings) that highlight the most exciting recent advances in information-theoretic cryptography. Such talks will usually survey an ITC-related topic that has seen exciting developments in the last couple of years. The selection of speakers will be conducted by the program committee.</p>
-
-<p>Highlights track: This track will invite talks (usually by students/postdocs) on ITC related papers that have appeared in the last one year in various venues such as STOC 2026, Eurocrypt 2026, FOCS 2025, Crypto 2025, Asiacrypt 2025, TCC 2025, STOC 2025. The selection of papers will be conducted by the program committee.</p>
-
-<p>For both the spotlight and the highlights track, we solicit nominations from the community (self-nominations are allowed). If you would like to nominate a recent result/speaker for either of these tracks, please send a nomination email to the PC chair at itcrypto2026@gmail.com.</p><br />                               
+<h2>Conflicts of interest</h2>
+<p>Potential conflicts include past advisors and students, people with the same affiliation within the last two years, recent coauthors or collaborators (approximately two papers within two years), and family members.</p>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="shell site-footer__grid">
+<div class="site-footer__brand">
+<a class="brand brand--footer" href="../index.html">
+<img alt="" class="brand-mark brand-mark--footer" src="../assets/itc-mark.svg"/>
+<span class="brand__text"><strong>ITC</strong><span>Conference on Information-Theoretic Cryptography</span></span>
+</a>
+<p>A research venue for information-theoretic security and the communities it connects.</p>
+</div>
+<div>
+<h2 class="footer-heading">ITC 2026</h2>
+<a href="../2026/index.html">Conference overview</a>
+<a href="../2026/2026prog.html">Program</a>
+<a href="../2026/2026Accepted.html">Accepted papers</a>
+<a href="https://crypto.iacr.org/2026/registration.php">Registration</a>
+</div>
+<div>
+<h2 class="footer-heading">Community</h2>
+<a href="../past.html">Past conferences</a>
+<a href="../steering.html">Steering committee</a>
+<a href="mailto:itcrypto2026@gmail.com">Contact the ITC 2026 chair</a>
+</div>
+<div class="cooperation">
+<p class="eyebrow eyebrow--light">In cooperation with</p>
+<a aria-label="International Association for Cryptologic Research" href="https://www.iacr.org/">
+<img alt="IACR — International Association for Cryptologic Research" src="../assets/iacrlogo.png"/>
+</a>
 </div>
 </div>
-
-  </body>
-  </html>
+<div class="shell site-footer__bottom">
+<p>© <span data-current-year="">2026</span> Conference on Information-Theoretic Cryptography.</p>
+<p>Information-theoretic security, broadly defined.</p>
+</div>
+</footer>
+</body>
+</html>
